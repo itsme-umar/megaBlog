@@ -7,7 +7,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12">
         <div className="flex flex-col sm:flex-row flex-wrap gap-8 sm:gap-12 lg:gap-16">
           <div className="flex-1 min-w-[200px]">
-            <Link to="/inkwell/" className="inline-block mb-4">
+            <Link to="/inkwell/home" className="inline-block mb-4">
               <Logo />
             </Link>
             <p className="text-sm text-surface-500 max-w-xs">
@@ -23,7 +23,7 @@ function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/inkwell/" className="text-stone-600 hover:text-primary-600 transition-colors">
+                <Link to="/inkwell/home" className="text-stone-600 hover:text-primary-600 transition-colors">
                   Home
                 </Link>
               </li>
@@ -50,12 +50,12 @@ function Footer() {
             </h3>
             <ul className="space-y-3">
               <li>
-                <Link to="/inkwell/" className="text-stone-600 hover:text-primary-600 transition-colors">
+                <Link to="/inkwell/home" className="text-stone-600 hover:text-primary-600 transition-colors">
                   Privacy
                 </Link>
               </li>
               <li>
-                <Link to="/inkwell/" className="text-stone-600 hover:text-primary-600 transition-colors">
+                <Link to="/inkwell/home" className="text-stone-600 hover:text-primary-600 transition-colors">
                   Terms
                 </Link>
               </li>

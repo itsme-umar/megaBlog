@@ -9,7 +9,7 @@ function Header() {
   const pathname = location.pathname.replace(/\/$/, '') || '/inkwell'
 
   const navItems = [
-    { name: 'Home', slug: '/inkwell/', active: true },
+    { name: 'Home', slug: '/inkwell/home', active: true },
     { name: 'Login', slug: '/inkwell/login', active: !authStatus },
     { name: 'Signup', slug: '/inkwell/signup', active: !authStatus },
     { name: 'All Posts', slug: '/inkwell/all-posts', active: authStatus },
@@ -18,6 +18,7 @@ function Header() {
 
   const isSelected = (slug) => {
     const normalized = slug.replace(/\/$/, '') || '/inkwell'
+    if (normalized === '/inkwell/home') return pathname === '/inkwell/home' || pathname === '/inkwell'
     return pathname === normalized
   }
 
@@ -26,7 +27,7 @@ function Header() {
       <Container>
         <nav className="flex items-center justify-between h-14 sm:h-16">
           <Link
-            to="/inkwell/"
+            to="/inkwell/home"
             className="flex items-center gap-2 font-display font-semibold text-stone-800 hover:text-primary-600 transition-colors"
           >
             <Logo />

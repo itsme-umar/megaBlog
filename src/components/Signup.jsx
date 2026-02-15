@@ -44,7 +44,7 @@ function Signup() {
     <div className="flex items-center justify-center min-h-[calc(100vh-12rem)] py-8 px-4">
       <div className="w-full max-w-md rounded-2xl border border-surface-200 bg-white p-8 shadow-soft animate-fade-in">
         <div className="text-center mb-8">
-          <Link to="/inkwell/" className="inline-block mb-6">
+          <Link to="/inkwell/home" className="inline-block mb-6">
             <Logo />
           </Link>
           <h2 className="font-display text-2xl font-bold text-stone-900">

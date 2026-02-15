@@ -4,9 +4,9 @@ import App from './App.jsx'
 import './index.css'
 import { Provider } from 'react-redux'
 import store from './store/store.js'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, Navigate } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { AuthLayout} from './components/index.js'
+import { AuthLayout } from './components/index.js'
 import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import AllPosts from './pages/AllPosts.jsx'
@@ -15,46 +15,47 @@ import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
 
 const router = createBrowserRouter([{
-  path: '/inkwell/',
+  path: '/inkwell',
   element: <App />,
   children: [
+    { index: true, element: <Navigate to="/inkwell/home" replace /> },
     {
-      path: '/inkwell/',
+      path: 'home',
       element: <Home />
     },
     {
-      path: '/inkwell/login',
-      element: <AuthLayout authentication ={false}>
+      path: 'login',
+      element: <AuthLayout authentication={false}>
         <Login />
       </AuthLayout>
     },
     {
-      path: '/inkwell/signup',
-      element: <AuthLayout authentication ={false}>
+      path: 'signup',
+      element: <AuthLayout authentication={false}>
         <Signup />
       </AuthLayout>
     },
     {
-      path: '/inkwell/all-posts',
+      path: 'all-posts',
       element: <AuthLayout authentication>
         {" "}
         <AllPosts />
       </AuthLayout>
     },
     {
-      path: '/inkwell/add-post',
+      path: 'add-post',
       element: <AuthLayout authentication>
         <AddPost />
       </AuthLayout>
     },
     {
-      path: '/inkwell/edit-post/:slug',
+      path: 'edit-post/:slug',
       element: <AuthLayout authentication>
         <EditPost />
       </AuthLayout>
     },
     {
-      path: '/inkwell/post/:slug',
+      path: 'post/:slug',
       element: <Post />
     },
 

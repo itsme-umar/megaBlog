@@ -12,7 +12,7 @@ export default function AuthLayout({ children, authentication = true }) {
     if (authentication && !authStatus) {
       navigate('/inkwell/login')
     } else if (!authentication && authStatus) {
-      navigate('/inkwell/')
+      navigate('/inkwell/home')
     }
     setLoader(false)
   }, [authStatus, navigate, authentication])

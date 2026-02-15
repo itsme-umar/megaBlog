@@ -17,16 +17,16 @@ export default function Post() {
     if (slug) {
       appwriteService.getPost(slug).then((p) => {
         if (p) setPost(p)
-        else navigate('/inkwell/')
+        else navigate('/inkwell/home')
       })
-    } else navigate('/inkwell/')
+    } else navigate('/inkwell/home')
   }, [slug, navigate])
 
   const deletePost = () => {
     appwriteService.deletePost(post.$id).then((status) => {
       if (status) {
         appwriteService.deleteFile(post.featuredImage)
-        navigate('/inkwell/')
+        navigate('/inkwell/home')
       }
     })
   }
